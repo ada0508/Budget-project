@@ -1,0 +1,129 @@
+{% extends "base.html"%}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-custom-shadow">
+                    <div class="card-header custom-header text-white">Budget</div>
+                    <div class="card-body">
+                        <h5 class="card-title">120.000F CFA</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-custom-shadow">
+                    <div class="card-header custom-header text-white">Dépenses</div>
+                    <div class="card-body">
+                        <h5 class="card-title">400000F CFA</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-custom-shadow">
+                    <div class="card-header custom-header text-white">Solde</div>
+                    <div class="card-body">
+                        <h5 class="card-title">200000F CFA</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row mt-4">
+            <div class="card-header-custom">Liste des Dépenses</div>
+            <div class="card-body">
+                <table class="table table-bordered table-sm">
+        
+                    <thead class="bg-success">
+                        <tr>
+                            <td>Titre</td>
+                            <td>Montant</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for depense in depenses %}
+                        <tr>
+                            <td>{{ depense.titre }}</td>
+                            <td>{{ depense.montant }}</td>
+                            <td>
+                                    <a href="/delete_depense/{{ depense.id }}/" class="btn btn-danger mr-5">Supprimer</a>
+                                    <a href="/update/{{ depense.id }}/" class="btn btn-warning">Modifier</a>
+
+                            </td>
+                            
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            <td>
+                                <div class="mt-2 text-custom d-flex justify-content-between">
+                                    <p class="mb-0 me-2">AJOUTER DEPENSE</p>
+                                    <a class="text-custom" href="{{ url_for('ajout_depense') }}"><i class="fa-solid fa-circle-plus"></i></a>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+              
+    
+            </div>
+        </div>
+    
+        <div class="row mt-4">
+            <div class="card-header-custom">Liste des Revenus</div>
+            <div class="card-body">
+                <table class="table table-bordered table-sm">
+                    <thead class="bg-success">
+                        <tr>
+                            <td>Titre</td>
+                            <td>Montant</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tbody>
+                            {% for revenu in revenus %}
+                            <tr>
+                                <td>{{ revenu.titre }}</td>
+                                <td>{{ revenu.montant }}</td>
+                                <td>
+                               
+                                        <a href="/delete_revenu/{{ revenu.id }}/" class="btn btn-danger">Supprimer</a>
+                                        <a href="/update_revenu/{{ revenu.id }}/" class="btn btn-warning">Modifier</a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            <tr>
+                                <td>
+                                    <div class="mt-2 text-custom d-flex justify-content-between">
+                                        <p class="mb-0 me-2">AJOUTER REVENUS</p>
+                                        <a class="text-custom" href="{{ url_for('ajout_revenus') }}"><i class="fa-solid fa-circle-plus"></i></a>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        
+                    
+                </table>
+            </div>
+        </div>
+</body>
+</html>
+
+{% endblock content %}
+

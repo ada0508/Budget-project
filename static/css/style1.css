@@ -1,0 +1,38 @@
+
+
+body {
+    background-color: #e9ecef;
+}
+.img-logo {
+    width: 150px;      
+    height: auto;     
+    display: block;    
+    margin: 0 auto;  
+  }
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #495057;
+}
+
+.text-warning {
+    color: #ffc107;
+}
+
+.text-success {
+    color: #28a745;
+}
+
+.form-label {
+    color: #ffc107;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}

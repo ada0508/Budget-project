@@ -1,0 +1,67 @@
+body {
+  background-color: white;
+}
+
+.custom-header {
+  background-color: #0C5E69;
+}
+
+.img-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.card-header-custom {
+  color: #D1C000;
+}
+
+.card-custom-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 80%;
+}
+
+.table thead td {
+  background-color: #0C5E69;
+  color: #ffffff; 
+}
+
+
+
+  .text-custom {
+    color: #D1C000
+
+  }
+  .mt-2.d-flex.align-items-center.text-custom {
+    position: right;
+    font-size: 1.2rem; 
+   position: relative;
+    margin-bottom: 1rem; 
+    left:150px; 
+    top: 10px; 
+  }
+
+
+
+
+.mt-2.d-flex.align-items-center.text-custom i {
+    font-size: 1.2rem;
+}
+
+.card .table {
+  width: 80%; 
+  margin: 0 auto; 
+}
+
+
+
+

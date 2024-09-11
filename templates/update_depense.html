@@ -14,13 +14,14 @@
             <div class="col-md-6">
                 <img src="{{ url_for('static', filename='img/Group 5.png') }}" alt="Group 5" class="img-logo mb-3">
 
-                <form action="/update/{{ depense.id }}/" method="POST">
+                <form action="/update_depense/{{ depense.id }}/" method="POST">
+
                     <div class="form-group">
                         <label for="name" class="text-success">Titre</label>
                         <input type="text" name="name" id="name" class="form-control" value="{{ depense.titre }}">
                         <div class="valid-feedback">Valid.</div>
                     </div>
-                    <!-- Adding space between buttons -->
+                  
                     <div class="form-group">
                         <button type="submit" class="btn btn-success">Modifier</button>
                         <a href="{{ url_for('index') }}" class="btn btn-danger ml-2">Annuler</a>

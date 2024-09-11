@@ -112,21 +112,35 @@ def delete_revenu(id):
 
 
 
-@app.route("/update/<int:id>/", methods=["GET", "POST"])
-def update(id):
+@app.route("/update_depense/<int:id>/", methods=["GET", "POST"])
+def update_depense(id):
     depense = Depense.query.get_or_404(id)
     if request.method == "POST":
-        depense.titre = request.form.get('name')  # Récupère la valeur du champ du formulaire
+        depense.titre = request.form.get('name')
         try:
             db.session.commit()
             return redirect('/')
-        except Exception as e:
-            return "Error: " + str(e)  # Affiche l'erreur si une exception se produit
+        except Exception:
+            return "Error"
     else:
         title = "Mise à jour de la Dépense"
         return render_template("update_depense.html", title=title, depense=depense)
 
-            
+
+@app.route("/update_revenu/<int:id>/", methods=["GET", "POST"])
+def update_revenu(id):
+    revenu = Revenu.query.get_or_404(id)
+    if request.method == "POST":
+        revenu.titre = request.form.get('name')
+        try:
+            db.session.commit()
+            return redirect('/')
+        except Exception:
+            return "Error"
+    else:
+        title = "Mise à jour du Revenu"
+        return render_template("update_revenu.html", title=title, revenu=revenu)
+       
 
     
 

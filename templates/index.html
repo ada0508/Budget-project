@@ -56,7 +56,7 @@
                             <td>{{ depense.montant }}</td>
                             <td>
                                     <a href="/delete_depense/{{ depense.id }}/" class="btn btn-danger mr-5">Supprimer</a>
-                                    <a href="/update/{{ depense.id }}/" class="btn btn-warning">Modifier</a>
+                                    <a href="/update_depense/{{ depense.id }}/" class="btn btn-warning">Modifier</a>
 
                             </td>
                             
@@ -98,11 +98,9 @@
                                 <td>{{ revenu.titre }}</td>
                                 <td>{{ revenu.montant }}</td>
                                 <td>
-                               
                                         <a href="/delete_revenu/{{ revenu.id }}/" class="btn btn-danger">Supprimer</a>
                                         <a href="/update_revenu/{{ revenu.id }}/" class="btn btn-warning">Modifier</a>
 
-                                    </div>
                                 </td>
                             </tr>
                             {% endfor %}
